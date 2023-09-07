@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Info</title>
+</head>
+<body>
+    <h1>Get Info</h1>
+    <form action="{% url 'get_info' %}" method="get">
+        Slack Name: <input type="text" name="slack_name"><br>
+        Track: <input type="text" name="track"><br>
+        <input type="submit" value="Get Info">
+    </form>
+</body>
+</html>
