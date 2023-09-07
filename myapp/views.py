@@ -10,7 +10,7 @@ def get_info(request):
     track = request.GET.get('track')
 
     # Check if both slack_name and track are present and track is "backend"
-    if slack_name and track == "backend":
+    if slack_name == "dipec" and track == "backend":
         # Get the current day of the week
         current_day = datetime.now().strftime("%A")
 
@@ -36,6 +36,6 @@ def get_info(request):
     else:
         # Return an error JSON response for invalid parameters
         error_response = {
-            "error": "Invalid parameters. Use format ?slack_name=example_name&track=backend"
+            "error": "Invalid parameters. Use format ?slack_name=dipec&track=backend"
         }
         return JsonResponse(error_response, status=400)
